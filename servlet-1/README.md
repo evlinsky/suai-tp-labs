@@ -1,4 +1,4 @@
-# suai-tp-labs
+# servlet-1
 Install Tomcat
 ==============
 1. download [Apache Tomcat](http://tomcat.apache.org/download-60.cgi)
