@@ -23,4 +23,4 @@ Read
 ====
 1. read sources in "src/main/java"
 2. read tests in "src/test/java"
-3. read project file "pox.xml"
+3. read project file "pom.xml"
