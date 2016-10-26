@@ -7,17 +7,17 @@ Use maven
 =========
 1. cd to directory with "pom.xml"
 2. compile
-- run "mvn compile"
-- see class files in "target/classes"
+    * run "mvn compile"
+    * see class files in "target/classes"
 3. clean
-- run "mvn clean"
-- see that "target" directory disappears
+    * run "mvn clean"
+    * see that "target" directory disappears
 4. test
-- run "mvn test"
-- see that all tests passed
+    * run "mvn test"
+    * see that all tests passed
 5. package
-- run "mvn package"
-- run "java -jar target/example-1.0.jar"
+    * run "mvn package"
+    * run "java -jar target/example-1.0.jar"
 
 Read
 ====
