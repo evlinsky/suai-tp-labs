@@ -6,8 +6,6 @@ public class Names {
     public Names() {
         names.add("Vasya");
         names.add("Kolya");
-        names.add("Masha");
-        names.add("Annya");
     }
 
     public synchronized void add(String name) {

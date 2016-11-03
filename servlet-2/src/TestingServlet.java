@@ -7,30 +7,30 @@ public class TestingServlet extends HttpServlet {
     Names names = new Names();
 
     public void init(ServletConfig config) {
+        names.add("Masha");
+        names.add("Annya");
     }
 
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-
         String uri = request.getRequestURI();
-        PrintWriter out = response.getWriter();
-        out.println("<html>\n<body>\n");
-        out.println("Last request URI was:" + uri);
         if( uri.equals("/servlet-2/servlet/Testing/add") ) {
             names.add(request.getParameter("name"));
         }
         else if( uri.equals("/servlet-2/servlet/Testing/reset") ) {
             names.reset();
         }
+        PrintWriter out = response.getWriter();
+        out.println("<html>\n<body>\n");
+        out.println("Last request URI was:" + uri);
         out.println(getMainPage());
-        out.println("</body></html>");
+        out.println("</body>\n</html>");
     }
 
     public String getMainPage() {
         StringBuilder sb = new StringBuilder();
         String strNames[] = names.getNamesStrings();
-        sb.append("<html>\n<body>\n");
         for(int i = 0; i < strNames.length; i++) {
             sb.append("<p>" + strNames[i] + "</p>\n");
         }
@@ -39,7 +39,6 @@ public class TestingServlet extends HttpServlet {
         sb.append("<input type=\"submit\" value=\"add\">\n");
         sb.append("</form>");
         sb.append("<a href=\"/servlet-2/servlet/Testing/reset\">reset</a>");
-        sb.append("</body>\n</body>");
         return sb.toString();
     }
 }
